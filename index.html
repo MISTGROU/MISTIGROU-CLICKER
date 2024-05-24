@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Clicker</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+        }
+        #clickerImage {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+        #score {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        #title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="title">MISTIGROU</div>
+        <img id="clickerImage" src="https://cdn.discordapp.com/attachments/1221159241927360613/1243677412202643577/MISTIGROU.png.png?ex=66525859&is=665106d9&hm=741ba73f91d08335cb9a417614a8dafeb423bcd9d7936e3a8e98670ac1ff1b81&" alt="Click me!">
+        <div id="score">0</div>
+    </div>
+
+    <script>
+        let score = 0;
+        const image = document.getElementById('clickerImage');
+        const scoreDisplay = document.getElementById('score');
+
+        image.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = score;
+        });
+    </script>
+</body>
+</html>
